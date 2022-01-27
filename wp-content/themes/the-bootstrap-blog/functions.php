@@ -770,10 +770,9 @@ add_action('init', 'register_brewery_cpt');
 
 
 
-//add_action('init', 'get_brewery');
 
 add_action( 'init', 'prefix_setup_schedule' );
-function prefix_setup_schedule() {
+function prefix_setup_schedule() { //function upload post will update hourly
 	wp_schedule_event(time(), 'hourly', 'update_brewery_list');
 }
 
